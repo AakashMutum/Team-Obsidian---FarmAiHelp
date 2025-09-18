@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Crop Prediction System</h1>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <h2>Enter Field Information</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label for="latitude">Latitude:</label>
+                    <input type="number" id="latitude" step="0.000001" required>
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Longitude:</label>
+                    <input type="number" id="longitude" step="0.000001" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Field Area (hectares):</label>
+                    <input type="number" id="area" step="0.1" min="0.1" required>
+                </div>
+                <h3>Soil Information</h3>
+                <div class="form-group">
+                    <label for="soil_type">Soil Type:</label>
+                    <select id="soil_type" required>
+                        <option value="loamy">Loamy</option>
+                        <option value="clay">Clay</option>
+                        <option value="sandy">Sandy</option>
+                        <option value="silt">Silt</option>
+                        <option value="sandy_loam">Sandy Loam</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Get Prediction</button>
+            </form>
+        </section>
+
+        <section class="results-section" id="results" style="display: none;">
+            <h2>Prediction Results</h2>
+            <div class="result-card">
+                <h3>Recommended Crop:</h3>
+                <p id="recommendedCrop"></p>
+            </div>
+            <div class="result-card">
+                <h3>Profitability Analysis:</h3>
+                <div id="profitabilityDetails">
+                    <p>Expected Yield: <span id="expectedYield"></span> tons</p>
+                    <p>Total Cost: $<span id="totalCost"></span></p>
+                    <p>Expected Revenue: $<span id="expectedRevenue"></span></p>
+                    <p>Projected Profit: $<span id="projectedProfit"></span></p>
+                    <p>ROI: <span id="roi"></span>%</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Crop Prediction System. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

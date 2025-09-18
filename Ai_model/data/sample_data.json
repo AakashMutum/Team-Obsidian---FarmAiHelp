@@ -1,0 +1,143 @@
+{
+    "rice": {
+        "name": "Rice",
+        "growing_season": "wet",
+        "water_needs": "high",
+        "temperature_range": {
+            "min": 20,
+            "max": 35
+        },
+        "soil_requirements": {
+            "ph": {
+                "min": 5.5,
+                "max": 6.5
+            },
+            "type": "clay loam",
+            "drainage": "poor"
+        },
+        "growth_period": {
+            "days": 120,
+            "stages": [
+                {
+                    "name": "seedling",
+                    "duration": 20
+                },
+                {
+                    "name": "tillering",
+                    "duration": 30
+                },
+                {
+                    "name": "panicle_initiation",
+                    "duration": 30
+                },
+                {
+                    "name": "flowering",
+                    "duration": 20
+                },
+                {
+                    "name": "maturity",
+                    "duration": 20
+                }
+            ]
+        },
+        "nutrient_requirements": {
+            "nitrogen": "high",
+            "phosphorus": "medium",
+            "potassium": "medium"
+        }
+    },
+    "wheat": {
+        "name": "Wheat",
+        "growing_season": "winter",
+        "water_needs": "medium",
+        "temperature_range": {
+            "min": 15,
+            "max": 30
+        },
+        "soil_requirements": {
+            "ph": {
+                "min": 6.0,
+                "max": 7.0
+            },
+            "type": "loam",
+            "drainage": "good"
+        },
+        "growth_period": {
+            "days": 150,
+            "stages": [
+                {
+                    "name": "germination",
+                    "duration": 15
+                },
+                {
+                    "name": "tillering",
+                    "duration": 45
+                },
+                {
+                    "name": "stem_extension",
+                    "duration": 30
+                },
+                {
+                    "name": "heading",
+                    "duration": 30
+                },
+                {
+                    "name": "ripening",
+                    "duration": 30
+                }
+            ]
+        },
+        "nutrient_requirements": {
+            "nitrogen": "medium",
+            "phosphorus": "medium",
+            "potassium": "low"
+        }
+    },
+    "corn": {
+        "name": "Corn",
+        "growing_season": "summer",
+        "water_needs": "medium",
+        "temperature_range": {
+            "min": 18,
+            "max": 32
+        },
+        "soil_requirements": {
+            "ph": {
+                "min": 5.8,
+                "max": 7.0
+            },
+            "type": "sandy loam",
+            "drainage": "good"
+        },
+        "growth_period": {
+            "days": 100,
+            "stages": [
+                {
+                    "name": "emergence",
+                    "duration": 10
+                },
+                {
+                    "name": "vegetative",
+                    "duration": 40
+                },
+                {
+                    "name": "tasseling",
+                    "duration": 20
+                },
+                {
+                    "name": "silking",
+                    "duration": 15
+                },
+                {
+                    "name": "maturity",
+                    "duration": 15
+                }
+            ]
+        },
+        "nutrient_requirements": {
+            "nitrogen": "high",
+            "phosphorus": "medium",
+            "potassium": "high"
+        }
+    }
+}
