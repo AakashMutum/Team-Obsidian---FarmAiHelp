@@ -12,7 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 const CropInputForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    landSize: [2.5],
+    landSize: "",
     soilType: "",
     waterAvailability: "",
     budget: "",
@@ -43,27 +43,22 @@ const CropInputForm = () => {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Land Size */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <Label className="text-foreground font-medium">
-                  Land Size: {formData.landSize[0]} acres
-                </Label>
+                <Label className="text-foreground font-medium">Land Size (acres)</Label>
               </div>
-              <Slider
+              <Input
+                type="number"
+                placeholder="Enter land size in acres"
                 value={formData.landSize}
-                onValueChange={(value) =>
-                  setFormData({ ...formData, landSize: value })
+                onChange={(e) =>
+                  setFormData({ ...formData, landSize: e.target.value })
                 }
-                max={10}
-                min={0.1}
-                step={0.1}
-                className="w-full"
+                className="glass-input"
+                step="0.1"
+                min="0.1"
               />
-              <div className="flex justify-between text-xs text-muted-foreground">
-                <span>0.1 acres</span>
-                <span>10 acres</span>
-              </div>
             </div>
 
             {/* Soil Type */}
