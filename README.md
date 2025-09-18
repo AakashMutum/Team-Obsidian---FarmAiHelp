@@ -57,7 +57,7 @@ FarmAiHelp suggests the **best crop to cultivate** and provides an **estimated r
 flowchart TD
     A[Farmer Inputs] -->|Land Size, Water, Weather, Market Prices| B[Flask Backend]
     B --> C[AI Model - Crop Recommendation Engine]
-    C --> D[ROI Calculator]
+    C --> D[AI Crop Recommender]
     D --> E[Frontend - TypeScript + CSS]
     E --> F[Farmer Output: Best Crop + ROI]
 ```
@@ -146,7 +146,6 @@ The app will start at: `http://127.0.0.1:5000/`
 ## 🚀 Future Enhancements  
 - 🔄 **Multi-crop Planning** – Suggest crop rotation for better soil health.  
 - 📡 **IoT Sensor Integration** – Use real-time soil and weather sensors.  
-- 🗣 **Regional Language Support** – Voice/text-based interaction in Indian languages.  
 - ☁️ **Cloud Deployment** – Scalable solution for nationwide adoption.  
 - 📈 **Market Forecasting** – Predict future crop demand and prices.  
 
