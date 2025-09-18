@@ -57,7 +57,7 @@ FarmAiHelp suggests the **best crop to cultivate** and provides an **estimated r
 flowchart TD
     A[Farmer Inputs] -->|Land Size, Water, Weather, Market Prices| B[Flask Backend]
     B --> C[AI Model - Crop Recommendation Engine]
-    C --> D[ROI Calculator]
+    C --> D[AI Crop Recommender]
     D --> E[Frontend - TypeScript + CSS]
     E --> F[Farmer Output: Best Crop + ROI]
 ```
@@ -65,7 +65,7 @@ flowchart TD
 - **Farmer Inputs**: Land size, water availability, local weather, market prices.  
 - **Backend (Flask)**: Handles data preprocessing, model execution, and API endpoints.  
 - **AI Model**: Predicts suitable crops based on input parameters.  
-- **ROI Calculator**: Estimates financial returns.  
+- **AI Crop Recommendations**: Estimates financial returns based on crops recommended.  
 - **Frontend (TypeScript + CSS)**: Displays results in an accessible web UI.  
 
 ---
@@ -146,7 +146,6 @@ The app will start at: `http://127.0.0.1:5000/`
 ## 🚀 Future Enhancements  
 - 🔄 **Multi-crop Planning** – Suggest crop rotation for better soil health.  
 - 📡 **IoT Sensor Integration** – Use real-time soil and weather sensors.  
-- 🗣 **Regional Language Support** – Voice/text-based interaction in Indian languages.  
 - ☁️ **Cloud Deployment** – Scalable solution for nationwide adoption.  
 - 📈 **Market Forecasting** – Predict future crop demand and prices.  
 
@@ -167,7 +166,12 @@ The app will start at: `http://127.0.0.1:5000/`
 ---
 
 ## 👥 Contributors  
-This project was developed by **Team Obsidian**.  
+This project was developed by **Team Obsidian**:  
+
+- [aakashmutum](https://github.com/aakashmutum)  
+- [midnyghtsky](https://github.com/midnyghtsky)  
+- [lavanyagupta1711](https://github.com/lavanyagupta1711)  
+- [NIkhith-Pelluri](https://github.com/NIkhith-Pelluri)    
 
 ---
 
