@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Crop Planner Design System - Dark Agriculture Theme
+All colors MUST be HSL for proper theme support.
+*/
+
+@layer base {
+  :root {
+    /* Light theme (minimal - app is primarily dark) */
+    --background: 150 20% 95%;
+    --foreground: 150 15% 15%;
+    --primary: 150 60% 35%;
+    --primary-foreground: 150 20% 95%;
+    --secondary: 150 20% 85%;
+    --secondary-foreground: 150 15% 25%;
+    --accent: 150 40% 75%;
+    --accent-foreground: 150 15% 25%;
+    --muted: 150 15% 90%;
+    --muted-foreground: 150 10% 40%;
+    --card: 150 25% 98%;
+    --card-foreground: 150 15% 15%;
+    --border: 150 20% 85%;
+    --input: 150 20% 92%;
+    --ring: 150 60% 35%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Agriculture Theme */
+    --background: 150 15% 8%;
+    --foreground: 150 10% 92%;
+    
+    /* Primary - Emerald green for agriculture */
+    --primary: 150 75% 45%;
+    --primary-foreground: 150 15% 8%;
+    --primary-glow: 150 80% 55%;
+    
+    /* Secondary - Earth tones */
+    --secondary: 35 25% 25%;
+    --secondary-foreground: 150 10% 92%;
+    
+    /* Accent - Golden harvest */
+    --accent: 45 85% 55%;
+    --accent-foreground: 150 15% 8%;
+    
+    /* Surface colors with transparency for glass effect */
+    --card: 150 15% 12%;
+    --card-foreground: 150 10% 92%;
+    --card-glass: 150 15% 12% / 0.8;
+    
+    /* Muted surfaces */
+    --muted: 150 12% 15%;
+    --muted-foreground: 150 8% 65%;
+    
+    /* Interactive elements */
+    --border: 150 12% 20%;
+    --input: 150 12% 18%;
+    --ring: 150 75% 45%;
+    
+    /* Status colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 150 75% 45%;
+    --warning: 45 85% 55%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-surface: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(150 12% 10%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(150 15% 8%) 0%, hsl(150 20% 12%) 50%, hsl(150 15% 8%) 100%);
+    
+    /* Glass morphism effects */
+    --glass-bg: hsl(150 15% 12% / 0.7);
+    --glass-border: hsl(150 12% 25% / 0.3);
+    --glass-shadow: 0 8px 32px hsl(150 15% 8% / 0.4);
+    
+    /* Shadows */
+    --shadow-primary: 0 10px 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 20px hsl(150 15% 8% / 0.5);
+    
+    /* Animation easing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Glass morphism utility classes */
+  .glass-card {
+    @apply bg-glass-bg backdrop-blur-md border border-glass-border shadow-glass rounded-xl;
+  }
+  
+  .glass-input {
+    @apply bg-glass-bg backdrop-blur-sm border border-glass-border rounded-lg;
+  }
+  
+  /* Agriculture themed components */
+  .crop-stat-card {
+    @apply glass-card p-4 transition-all duration-300 hover:shadow-primary hover:border-primary/30;
+  }
+  
+  .weather-widget {
+    @apply glass-card p-6 bg-gradient-surface backdrop-blur-xl;
+  }
+  
+  /* Button variants for agricultural theme */
+  .btn-farmer {
+    @apply bg-gradient-primary text-primary-foreground px-6 py-3 rounded-lg font-medium shadow-primary transition-all duration-300 hover:shadow-lg hover:scale-105;
+  }
+  
+  .btn-secondary-farmer {
+    @apply glass-card text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary/20 hover:border-primary/50;
+  }
+}
