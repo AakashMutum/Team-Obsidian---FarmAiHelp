@@ -65,7 +65,7 @@ flowchart TD
 - **Farmer Inputs**: Land size, water availability, local weather, market prices.  
 - **Backend (Flask)**: Handles data preprocessing, model execution, and API endpoints.  
 - **AI Model**: Predicts suitable crops based on input parameters.  
-- **ROI Calculator**: Estimates financial returns.  
+- **AI Crop Recommendations**: Estimates financial returns based on crops recommended.  
 - **Frontend (TypeScript + CSS)**: Displays results in an accessible web UI.  
 
 ---
